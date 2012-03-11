@@ -171,10 +171,10 @@ void game_loop()
   				n++;break;
   			case SDLK_ESCAPE:
   				SDL_Quit();
-			case SDLK_UP: hetmans[n].yVel -= hetman_height / 2; break;
-            		case SDLK_DOWN: hetmans[n].yVel += hetman_height / 2; break;
-           		case SDLK_LEFT: hetmans[n].xVel -= hetman_width / 2; break;
-            		case SDLK_RIGHT: hetmans[n].xVel += hetman_width / 2; break;
+			case SDLK_UP: hetmans[n].yVel -= 5; break;
+            		case SDLK_DOWN: hetmans[n].yVel += 5; break;
+           		case SDLK_LEFT: hetmans[n].xVel -= 5; break;
+            		case SDLK_RIGHT: hetmans[n].xVel += 5; break;
   
   		}
   	   }
@@ -184,10 +184,10 @@ void game_loop()
         	//Adjust the velocity
         	switch( event.key.keysym.sym )
         	{
-           		case SDLK_UP: hetmans[n].yVel += hetman_height / 2; break;
-            		case SDLK_DOWN: hetmans[n].yVel -= hetman_height / 2; break;
-            		case SDLK_LEFT: hetmans[n].xVel += hetman_width / 2; break;
-         		case SDLK_RIGHT:hetmans[n]. xVel -= hetman_width / 2; break;
+           		case SDLK_UP: hetmans[n].yVel += 5; break;
+            		case SDLK_DOWN: hetmans[n].yVel -= 5; break;
+            		case SDLK_LEFT: hetmans[n].xVel += 5; break;
+         		case SDLK_RIGHT:hetmans[n]. xVel -= 5; break;
         	}
     	   }
        }
