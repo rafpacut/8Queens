@@ -1,5 +1,5 @@
 #include "h_class.hpp"
-#include "h_sdl.cpp"
+#include "h_sdl.hpp"
 
 //numer hetmana
 int n = 0;
