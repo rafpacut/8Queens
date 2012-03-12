@@ -48,14 +48,13 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination 
   SDL_BlitSurface( source, NULL, destination, &offset );
 }
 
-void init()
+SDL_Surface *init(int width, int height, int bpp)
 {
   SDL_Init( SDL_INIT_EVERYTHING );
-
-  //Set up the screen
-  screen = SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE);
 
   //Set the window caption
   SDL_WM_SetCaption( "Osmiu hetmanow", NULL );
 
+  //Set up the screen
+  return SDL_SetVideoMode(width, height, bpp, SDL_SWSURFACE);
 }

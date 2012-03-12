@@ -10,11 +10,6 @@ vector<hetman> hetmans( 8, hetman() );
 SDL_Surface *background = NULL;
 SDL_Surface *screen = NULL;
 
-//Screen attributes
-const int SCREEN_WIDTH = 950;
-const int SCREEN_HEIGHT = 770;
-const int SCREEN_BPP = 32;
-
 //structure holding events
 SDL_Event event;
 
@@ -103,7 +98,12 @@ void game_loop()
 
 int main( int argc, char* args[] )
 {
-  init();
+  //Screen attributes
+  const int SCREEN_WIDTH = 950;
+  const int SCREEN_HEIGHT = 770;
+  const int SCREEN_BPP = 32;
+  screen = init(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP);
+
   load_files();
 
   ustaw(0);
