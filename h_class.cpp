@@ -51,35 +51,3 @@ void hetman::move()
     y -= yVel;
   }
 }
-
-
-
-
-
-
-
-bool kolizja(int n)
-{
-  bool p = false;
-  for( int i = 0 ; i < n ; i++ )
-  {
-    if( hetmans[i].dest_y == hetmans[n].dest_y || abs( hetmans[n].dest_y - hetmans[i].dest_y ) == n - i )
-      p = true;
-  }
-  return p;
-}
-
-
-void ustaw(int n)
-{
-  for( int i = 0 ; i < 8 ; i++ )
-  {
-    hetmans[n].dest_y = i;
-    if( !kolizja(n) )
-      if( n < 7 )
-        ustaw(n+1);
-      else
-        game_loop();
-  }
-}
-
