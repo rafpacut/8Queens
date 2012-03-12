@@ -3,10 +3,12 @@
 
 
 #include <iostream>
-#include <SDL.h>
 #include <string>
 #include <vector>
 #include <algorithm>
+
+#include <SDL.h>
+
 #include "h_sdl.cpp"
 using namespace std;
 
