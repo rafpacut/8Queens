@@ -7,3 +7,6 @@ h_sdl.o: h_sdl.hpp h_sdl.cpp
 
 hetmani.e: h_class.o h_sdl.o main.cpp   
 	g++ main.cpp h_class.o h_sdl.o `sdl-config --cflags --libs` -lSDL_image -o hetmani.e
+
+clear:
+	rm -f *.o *.e
