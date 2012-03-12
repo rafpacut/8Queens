@@ -1,7 +1,6 @@
 #ifndef h_class_hpp
 #define h_class_hpp
 
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,12 +9,10 @@
 #include <SDL.h>
 
 #include "h_sdl.cpp"
-using namespace std;
 
 //The dimensions of the queen
 int hetman_width = 85;
 int hetman_height = 85;
-
 
 class hetman
 {
