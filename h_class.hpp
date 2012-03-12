@@ -1,5 +1,4 @@
-#ifndef h_class_hpp
-#define h_class_hpp
+#pragma once
 
 #include <iostream>
 #include <string>
@@ -33,5 +32,3 @@ public :
 
 bool kolizja(int n);
 void ustaw(int n);
-
-#endif
