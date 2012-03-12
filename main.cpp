@@ -59,9 +59,10 @@ void game_loop(const Window& window)
         {
           case SDLK_RETURN:
             if(n == 7)
-            {hetman(); n= 0;
-              break;}
-            n++;break;
+	      n = 0;
+	    else
+	      n++;
+	    break;
           case SDLK_ESCAPE:
             SDL_Quit();
           case SDLK_UP: hetmans[n].yVel -= 5; break;
