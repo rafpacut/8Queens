@@ -1,5 +1,7 @@
 #include "h_class.hpp"
 
+extern std::vector<hetman> hetmans;
+
 hetman::hetman()
 {
   //Initialize the offsets

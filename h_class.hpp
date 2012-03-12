@@ -28,5 +28,6 @@ public :
   int dest_y;
 };
 
+
 bool kolizja(int n);
 void ustaw(int n);
