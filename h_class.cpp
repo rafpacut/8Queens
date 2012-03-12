@@ -4,6 +4,9 @@ extern std::vector<hetman> hetmans;
 extern int n;
 extern SDL_Surface *background;
 extern SDL_Surface *screen;
+extern const int SCREEN_WIDTH;
+extern const int SCREEN_HEIGHT;
+extern const int SCREEN_BPP;
 
 hetman::hetman()
 {
