@@ -6,7 +6,7 @@ using namespace std;
 //numer hetmana
 int n = 0;
 //vector of our hetmans
-vector<hetman> hetmans( 8, hetman() );
+vector<hetman> hetmans;
 
 //The surfaces
 SDL_Surface *background = NULL;
@@ -131,6 +131,8 @@ int main( int argc, char* args[] )
   const int SCREEN_HEIGHT = 770;
   const int SCREEN_BPP = 32;
   window.init(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP);
+
+  hetmans.resize(8, hetman(window));
 
   load_files();
 

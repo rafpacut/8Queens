@@ -11,7 +11,8 @@
 
 class hetman
 {
-public :
+public:
+  Window& window;
   SDL_Surface *queen;
   SDL_Surface *rect;
   int x;
@@ -19,7 +20,7 @@ public :
   int xVel;
   int yVel;
 
-  hetman();
+  hetman(Window& window);
   void move();
   void show();
 

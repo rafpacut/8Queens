@@ -12,7 +12,7 @@ extern const int SCREEN_BPP;
 int hetman_width = 85;
 int hetman_height = 85;
 
-hetman::hetman()
+hetman::hetman(Window& window) : window(window)
 {
   //Initialize the offsets
   x = 0;
@@ -26,7 +26,7 @@ hetman::hetman()
 
 void hetman::show()
 {
-  apply_surface( x, y, hetmans[n].queen, screen );
+  apply_surface( x, y, hetmans[n].queen, window.screen );
 }
 
 void hetman::move()
