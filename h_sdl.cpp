@@ -1,24 +1,4 @@
 #include "h_sdl.hpp"
-using namespace std;
-
-//The surfaces
-SDL_Surface *background = NULL;
-SDL_Surface *screen = NULL;
-
-//Screen attributes
-const int SCREEN_WIDTH = 950;
-const int SCREEN_HEIGHT = 770;
-const int SCREEN_BPP = 32;
-
-//structure holding events
-SDL_Event event;
-
-
-
-
-
-//--------------------------------------------------------------------------------------------------------------------------------
-
 
 SDL_Surface *load_image( std::string filename )
 {
