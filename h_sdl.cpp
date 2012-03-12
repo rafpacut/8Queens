@@ -1,12 +1,7 @@
 #ifndef h_sdl_hpp
 #define h_sdl_hpp
 
-#include <string>
-#include <vector>
-
-#include <SDL.h>
-#include "SDL/SDL_image.h"
-#include "h_class.hpp"
+#include "h_sdl.hpp"
 using namespace std;
 
 //The surfaces
