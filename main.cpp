@@ -1,6 +1,8 @@
 #include "h_class.hpp"
 #include "h_sdl.hpp"
 
+using namespace std;
+
 //numer hetmana
 int n = 0;
 //vector of our hetmans
