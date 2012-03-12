@@ -3,7 +3,6 @@
 extern std::vector<hetman> hetmans;
 extern int n;
 extern SDL_Surface *background;
-extern SDL_Surface *screen;
 
 //The dimensions of the queen
 int hetman_width = 85;
