@@ -4,9 +4,6 @@ extern std::vector<hetman> hetmans;
 extern int n;
 extern SDL_Surface *background;
 extern SDL_Surface *screen;
-extern const int SCREEN_WIDTH;
-extern const int SCREEN_HEIGHT;
-extern const int SCREEN_BPP;
 
 //The dimensions of the queen
 int hetman_width = 85;
@@ -35,7 +32,7 @@ void hetman::move()
   x += xVel;
 
   //If the queen went too far to the left or right
-  if( ( x < 0 ) || ( x + hetman_width > SCREEN_WIDTH ) )
+  if( ( x < 0 ) || ( x + hetman_width > window.screen_width ) )
   {
     //move back
     x -= xVel;
@@ -45,7 +42,7 @@ void hetman::move()
   y += yVel;
 
   //If the queen went too far up or down
-  if( ( y < 0 ) || ( y + hetman_height > SCREEN_HEIGHT ) )
+  if( ( y < 0 ) || ( y + hetman_height > window.screen_height ) )
   {
     //move back
     y -= yVel;
