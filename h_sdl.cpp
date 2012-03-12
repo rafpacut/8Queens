@@ -1,12 +1,12 @@
 #ifndef h_sdl_hpp
 #define h_sdl_hpp
 
-
-#include<SDL.h>
+#include <SDL.h>
 #include "SDL/SDL_image.h"
-#include<string>
+#include <string>
 #include "h_class.hpp"
-#include<vector>
+#include <vector>
+using namespace std;
 
 //The surfaces
 SDL_Surface *background = NULL;
