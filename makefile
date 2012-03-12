@@ -1,4 +1,7 @@
 .PHONY: hetmani.e
+
+all: hetmani.e
+
 h_class.o: h_class.hpp h_class.cpp
 	g++ -c h_class.cpp `sdl-config --cflags --libs` -o h_class.o
 
