@@ -1,6 +1,3 @@
-#ifndef h_sdl_hpp
-#define h_sdl_hpp
-
 #include "h_sdl.hpp"
 using namespace std;
 
@@ -169,5 +166,3 @@ void game_loop()
     apply_surface( 0, 0, background, screen );
   }
 }
-
-#endif
