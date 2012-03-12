@@ -12,7 +12,7 @@
 class hetman
 {
 public:
-  Window& window;
+  const Window& window;
   SDL_Surface *queen;
   SDL_Surface *rect;
   int x;
@@ -20,7 +20,7 @@ public:
   int xVel;
   int yVel;
 
-  hetman(Window& window);
+  hetman(const Window& window);
   void move();
   void show();
 

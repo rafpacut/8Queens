@@ -12,7 +12,7 @@ extern const int SCREEN_BPP;
 int hetman_width = 85;
 int hetman_height = 85;
 
-hetman::hetman(Window& window) : window(window)
+hetman::hetman(const Window& window) : window(window)
 {
   //Initialize the offsets
   x = 0;
