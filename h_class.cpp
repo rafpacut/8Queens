@@ -1,6 +1,9 @@
 #include "h_class.hpp"
 
 extern std::vector<hetman> hetmans;
+extern int n;
+extern SDL_Surface *background;
+extern SDL_Surface *screen;
 
 hetman::hetman()
 {
