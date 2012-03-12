@@ -5,7 +5,6 @@
 
 #include <SDL.h>
 #include "SDL/SDL_image.h"
-#include "h_class.hpp"
 
 struct Window
 {
