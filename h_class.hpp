@@ -9,10 +9,6 @@
 
 #include "h_sdl.hpp"
 
-//The dimensions of the queen
-int hetman_width = 85;
-int hetman_height = 85;
-
 class hetman
 {
 public :

@@ -8,6 +8,10 @@ extern const int SCREEN_WIDTH;
 extern const int SCREEN_HEIGHT;
 extern const int SCREEN_BPP;
 
+//The dimensions of the queen
+int hetman_width = 85;
+int hetman_height = 85;
+
 hetman::hetman()
 {
   //Initialize the offsets
@@ -78,3 +82,4 @@ void ustaw(int n)
         game_loop();
   }
 }
+
