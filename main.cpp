@@ -10,7 +10,6 @@ vector<hetman> hetmans( 8, hetman() );
 
 //The surfaces
 SDL_Surface *background = NULL;
-SDL_Surface *screen = NULL;
 
 //structure holding events
 SDL_Event event;
@@ -42,7 +41,7 @@ void clean_up()
 
 
 
-void game_loop()
+void game_loop(const Window& window)
 {
   bool quit = false;
   while( quit == false )
@@ -86,15 +85,15 @@ void game_loop()
       }
     }
     hetmans[n].move();
-    apply_surface( (n*118.75), (hetmans[n].dest_y*96.25), hetmans[n].rect, screen );
+    apply_surface( (n*118.75), (hetmans[n].dest_y*96.25), hetmans[n].rect, window.screen );
     for( int i = 0 ; i <= n ; i++ )
     {
       hetmans[i].show();
     }
     //Update the screen
-    SDL_Flip( screen );
+    SDL_Flip( window.screen );
     //Apply the background to the screen
-    apply_surface( 0, 0, background, screen );
+    apply_surface( 0, 0, background, window.screen );
   }
 }
 
@@ -110,16 +109,16 @@ bool kolizja(int n)
 }
 
 
-void ustaw(int n)
+void ustaw(int n, const Window& window)
 {
   for( int i = 0 ; i < 8 ; i++ )
   {
     hetmans[n].dest_y = i;
     if( !kolizja(n) )
       if( n < 7 )
-        ustaw(n+1);
+        ustaw(n+1, window);
       else
-        game_loop();
+        game_loop(window);
   }
 }
 
@@ -127,14 +126,15 @@ void ustaw(int n)
 int main( int argc, char* args[] )
 {
   //Screen attributes
+  Window window;
   const int SCREEN_WIDTH = 950;
   const int SCREEN_HEIGHT = 770;
   const int SCREEN_BPP = 32;
-  screen = init(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP);
+  window.init(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP);
 
   load_files();
 
-  ustaw(0);
+  ustaw(0, window);
 
 
   //Free the surfaces and quit SDL
