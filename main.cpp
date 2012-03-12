@@ -3,14 +3,14 @@
 
 int main( int argc, char* args[] )
 {
-	init();
-	load_files();
-	
-	ustaw(0);
+  init();
+  load_files();
+
+  ustaw(0);
 
 
-    //Free the surfaces and quit SDL
-    clean_up();
+  //Free the surfaces and quit SDL
+  clean_up();
 
-    return 0;
+  return 0;
 }
