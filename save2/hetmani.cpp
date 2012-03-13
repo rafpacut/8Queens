@@ -19,6 +19,7 @@ SDL_Event event;
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 hetman::hetman()
 {
     //Initialize the offsets
@@ -166,7 +167,7 @@ void game_loop()
   		{
   			case SDLK_RETURN:
   				if(n == 7)
- 				{hetman(); n= 0;
+ 				{ quit =true;
   					break;}
   				n++;break;
   			case SDLK_ESCAPE:
@@ -201,6 +202,12 @@ void game_loop()
 	SDL_Flip( screen );
 		    //Apply the background to the screen
     apply_surface( 0, 0, background, screen );
+    }
+    n = 0;
+    for(int i = 0; i < 8; i++)
+    {
+    	hetmans[i].x = 0;
+    	hetmans[i].y = 0;
     }
 }
 
